@@ -71,6 +71,6 @@ Promise.series(genTimeout)
 1 resolved
 2 resolved
 3 resolved
-error Error: 5 not resolved(…)
+error Error: 4 not resolved(…)
 Finally
 ```
