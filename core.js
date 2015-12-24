@@ -3,15 +3,10 @@ Promise.series = (promises) => {
     throw new TypeError("series must implement shift()");
   }
 
-  if (promises.length === 0) {
-    return Promise.resolve();
-  }
-
   function step() {
     return new Promise((resolve, reject) => {
       let currentPromise = promises.shift();
       if (currentPromise === undefined) {
-        console.log("resolve");
         resolve();
       }
 
