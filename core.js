@@ -1,21 +1,32 @@
 Promise.series = (promises) => {
-  if (typeof promises.shift !== "function") {
-    throw new TypeError("series must implement shift()");
-  }
+    let isGenerator = false;
+    if (promises.constructor.name !== 'GeneratorFunction') {
+      isGenerator = true;
+    }
 
-  function step() {
-    return new Promise((resolve, reject) => {
-      let currentPromise = promises.shift();
-      if (currentPromise === undefined) {
-        resolve();
-      }
+    if (!isGenerator && typeof promises.shift !== "function") {
+      throw new TypeError("series must implement shift() or be Generator");
+    }
 
-      Promise.resolve(currentPromise())
-      .then(step)
-      .then(resolve)
-      .catch(reject);
-    });
-  }
+    function step() {
+      return new Promise((resolve, reject) => {
+        let currentPromise;
+        if (isGenerator) {
+          currentPromise = promises.next().value;
+        } else {
+          currentPromise = promises.shift();
+        }
 
-  return step();
-};
+        if (currentPromise === undefined) {
+          resolve();
+        }
+
+        Promise.resolve(isGenerator ? currentPromise : currentPromise())
+        .then(step)
+        .then(resolve)
+        .catch(reject);
+      });
+    }
+
+    return step();
+  };
