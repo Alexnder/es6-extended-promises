@@ -1,4 +1,6 @@
-Promise.series = (promises) => {
+function series(promises) {
+  "use strict";
+
   let isGenerator = false;
 
   if (promises.constructor.name === 'GeneratorFunction') {
@@ -30,4 +32,15 @@ Promise.series = (promises) => {
   }
 
   return step();
-};
+}
+
+function extendPromise(promise) {
+  if (typeof promise == "undefined") {
+    throw new Error("Parameter Promise required");
+  }
+  if (typeof promise.series !== "function") {
+    promise.series = series;
+  }
+}
+
+module.exports = extendPromise;

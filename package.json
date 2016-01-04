@@ -1,0 +1,23 @@
+{
+  "name": "es6-extended-promises",
+  "version": "1.0.0",
+  "description": "Provide additional methods to Promise object. Witout other dependenties. Based on s6 promises.",
+  "main": "core.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexnder/es6-extended-promises.git"
+  },
+  "keywords": [
+    "es6",
+    "promises"
+  ],
+  "author": "Alx <opensunset@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexnder/es6-extended-promises/issues"
+  },
+  "homepage": "https://github.com/Alexnder/es6-extended-promises#readme"
+}
