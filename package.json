@@ -1,7 +1,7 @@
 {
   "name": "es6-extended-promises",
   "version": "1.0.0",
-  "description": "Provide additional methods to Promise object. Witout other dependenties. Based on s6 promises.",
+  "description": "Provide additional methods to Promise object. Witout other dependenties. Based on es6 promises.",
   "main": "core.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

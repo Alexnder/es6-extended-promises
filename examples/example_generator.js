@@ -19,3 +19,12 @@ Promise.series(genTimeout)
 .then(() => {
   console.log("Finally");
 });
+
+/** OUTPUT
+0 resolved
+1 resolved
+2 resolved
+3 resolved
+error [Error: 4 not resolved]
+Finally
+*/

@@ -30,3 +30,11 @@ Promise.series([
 .then(() => {
   console.log("Finally");
 });
+
+/** OUTPUT
+First resolved
+1.5 resolved
+Second resolved
+error [Error: last err]
+Finally
+*/
