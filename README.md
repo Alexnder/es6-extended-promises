@@ -9,17 +9,19 @@ Implements additional Promise functions to Promise object. Witout other dependen
 Accept array with functions which return promises or generator which return promises or something else.
 Method returns Promise.
 
-  require('es6-extended-promises')(Promise);
+```
+require('es6-extended-promises')(Promise);
 
-  Promise.series([...]);
+Promise.series([...]);
 
-  Promise.series(generator)
-  .catch((err) => {
-    console.log("error", err);
-  })
-  .then(() => {
-    console.log("Finally");
-  });
+Promise.series(generator)
+.catch((err) => {
+  console.log("error", err);
+})
+.then(() => {
+  console.log("Finally");
+});
+```
 
 ## Examples
 See full examples in [examples](examples) folder
