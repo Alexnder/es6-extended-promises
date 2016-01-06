@@ -1,9 +1,9 @@
-# es6-extended-promises
+# extended-promises
 Implements additional Promise functions to Promise object. Witout other dependenties. Based on es6 promises.
 
 ## Installation
 
-`npm install --save https://github.com/Alexnder/es6-extended-promises.git`
+`npm install --save https://github.com/Alexnder/extended-promises.git`
 
 ## Methods
 ### `series` method
