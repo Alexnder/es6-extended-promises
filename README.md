@@ -11,7 +11,7 @@ Accept array with functions which return promises or generator which return prom
 Method returns Promise.
 
 ```
-require('es6-extended-promises')(Promise);
+require('extended-promises')(Promise);
 
 Promise.series([...]);
 
