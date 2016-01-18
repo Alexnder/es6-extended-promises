@@ -24,5 +24,9 @@ Promise.series(generator)
 });
 ```
 
+### `parallel` method
+Accept array with functions which return promises or generator which return promises or something else.
+Method returns Promise. Which resolves with result array.
+
 ## Examples
 See full examples in [examples](examples) folder
